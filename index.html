@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Diagnóstico de Angie Tatiana Garcia Porras</title>
+
+<style>
+
+body{
+    background:#0d0d0d;
+    color:#00ff88;
+    font-family:Consolas, monospace;
+    padding:40px;
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+#terminal{
+    white-space:pre-line;
+    line-height:1.8;
+}
+
+.cursor{
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+/* Ajustes para celular */
+@media (max-width:600px){
+
+    body{
+        padding:25px;
+        font-size:16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="terminal"></div>
+<span class="cursor">█</span>
+
+<script>
+
+const mensajes = [
+
+"INICIANDO DIAGNÓSTICO...",
+
+"",
+
+"Analizando paciente...",
+
+"",
+
+"Energía de Angie críticamente...",
+
+"Nivel de paciencia: 1% ✓",
+
+"Ganas de dormir: 99% ✓",
+
+"",
+
+"Generando reporte final...",
+
+"",
+
+"RESULTADO:",
+
+"",
+
+"Angie tuvo un día pesadito, un poco estresante y eso no esta bien :(",
+
+"",
+
+"Tratamiento recomendado :",
+
+"→ comida rica",
+
+"→ descansar",
+
+"→ muchos abracitos y besitos <3",
+
+"",
+
+"Persona ideal para cuidarla...",
+
+"",
+
+"Rodrigo.exe encontrado ✓",
+
+"",
+
+"Estado actual:",
+
+"Angie es la persona favorita de Rodrigo <3",
+
+"Te amo mucho amorcito <3",
+
+"no te estreses mucho mi vida ",
+
+];
+
+const terminal = document.getElementById("terminal");
+
+let i = 0;
+
+function escribir(){
+
+    if(i < mensajes.length){
+
+        terminal.innerHTML += mensajes[i] + "\n";
+
+        i++;
+
+        setTimeout(escribir, 1200);
+
+    }
+
+}
+
+escribir();
+
+</script>
+
+</body>
+</html>
